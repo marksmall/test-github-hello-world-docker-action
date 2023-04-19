@@ -7,10 +7,14 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: marksmall/github-docker-action-hello-world@v1
+        uses: marksmall/github-docker-action-hello-world@v2
         with:
           who-to-greet: 'Mona the Octocat'
 
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+      # Run tippecanoe
+      - name: Run tippecanoe
+        run: /usr/local/bin/tippecanoe --version
