@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: marksmall/github-docker-action-hello-world@v2
+        uses: marksmall/github-docker-action-hello-world@v3
         with:
           who-to-greet: 'Mona the Octocat'
 
