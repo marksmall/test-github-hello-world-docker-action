@@ -5,16 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: marksmall/github-docker-action-hello-world@v3
-        with:
-          who-to-greet: 'Mona the Octocat'
+      - name: Install tippecanoe
+        uses: marksmall/github-docker-action-hello-world@v4
 
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
-
-      # Run tippecanoe
       - name: Run tippecanoe
         run: /usr/local/bin/tippecanoe --version
+
+      - name: Run tippecanoe
+        run: tippecanoe --version
