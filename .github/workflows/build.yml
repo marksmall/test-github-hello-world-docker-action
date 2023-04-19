@@ -9,8 +9,8 @@ jobs:
 
       - id: foo
         uses: marksmall/github-docker-action-hello-world@v10
-        with:
-          who-to-greet: 'Mona the Octocat'
+        # with:
+        #   who-to-greet: 'Mona the Octocat'
 
       # - run: echo random-number ${{ steps.foo.outputs.random-number }}
       #   shell: bash
