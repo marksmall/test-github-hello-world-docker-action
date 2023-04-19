@@ -8,11 +8,17 @@ jobs:
       - uses: actions/checkout@v3
 
       - id: foo
-        uses: marksmall/github-docker-action-hello-world@v5
+        uses: marksmall/github-docker-action-hello-world@v6
         with:
           who-to-greet: 'Mona the Octocat'
 
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
+
+      - run: /usr/local/bin/tippecanoe --version
+        shell: bash
+
+      - run: tippecanoe --version
         shell: bash
 
   # hello_world_job:
