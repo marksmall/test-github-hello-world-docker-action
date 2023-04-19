@@ -5,31 +5,18 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
 
       - id: foo
-        uses: marksmall/github-docker-action-hello-world@v6
-        with:
-          who-to-greet: 'Mona the Octocat'
+        uses: marksmall/github-docker-action-hello-world@v7
+        # with:
+        #   who-to-greet: 'Mona the Octocat'
 
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+      # - run: echo random-number ${{ steps.foo.outputs.random-number }}
+      #   shell: bash
 
-      - run: /usr/local/bin/tippecanoe --version
-        shell: bash
+      # - run: /usr/local/bin/tippecanoe --version
+      #   shell: bash
 
       - run: tippecanoe --version
         shell: bash
-
-  # hello_world_job:
-  #   runs-on: ubuntu-latest
-  #   name: A job to say hello
-  #   steps:
-  #     - name: Install tippecanoe
-  #       uses: marksmall/github-docker-action-hello-world@v4
-
-  #     - name: Run tippecanoe
-  #       run: /usr/local/bin/tippecanoe --version
-
-  #     - name: Run tippecanoe
-  #       run: tippecanoe --version
